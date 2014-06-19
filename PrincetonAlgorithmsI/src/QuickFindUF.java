@@ -28,4 +28,20 @@ public class QuickFindUF {
 			if (id[i] == pid) id[i] = qid;
 	}
 	
+	public void printAll() {
+		if (id == null) return;
+		for (int i = 0; i < id.length; i++) 
+			System.out.print(id[i] + " ");
+	}
+	
+	public static void main(String[] args) {
+		QuickFindUF x = new QuickFindUF(10);
+		x.union(5,6);
+		x.union(0,9);
+		x.union(4,2);
+		x.union(7,9);
+		x.union(9,3);
+		x.union(7,1);
+		x.printAll();
+	}
 }
